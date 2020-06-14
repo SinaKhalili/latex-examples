@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{ifthen}
+\usepackage{pgffor}
+\usepackage{texmate}
+\title{\LaTeX{} youtube tutorial}
+\author{Sina}
+
+
+\begin{document}
+
+| 1.e4 e5 |
+\showboard
+
+
+\foreach \elem in {``beans",``sprouts", ``milk"}%
+{We should buy some \elem \\}
+
+\newcommand{\myvar}{false}
+Here is a claim $ a^n + b^n = c^n $
+\ifthenelse{ \equal{\myvar}{true} }{
+  This claim is self-evident
+}{
+  We leave this as an exercise to the reader
+}
+
+\newcommand{\exDelt}[1]{\Delta_#1}
+\begin{equation}
+    a = 1 + b^n
+\end{equation}
+
+\newenvironment{strangeLetter}{Hello }{... 
+and smell ya later}
+
+
+\newenvironment{king}
+{ \rule{1ex}{1ex}\hspace{\stretch{1}} }
+{ \hspace{\stretch{1}}\rule{1ex}{1ex} }
+
+
+
+\begin{king}
+Hello subjects
+\end{king}
+
+
+\begin{strangeLetter}
+I'm learning new \LaTeX{}
+\end{strangeLetter}
+
+\maketitle
+
+\end{document}
